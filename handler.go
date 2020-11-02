@@ -12,11 +12,10 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
-	rest "techradar-backend/pkg/rest"
 )
 
-func GetRoutes(mongoClient *MongoClient) []rest.Route {
-	routes := []rest.Route{
+func GetRoutes(mongoClient *MongoClient) []Route {
+	routes := []Route{
 		{Path: "/{database:[a-z]+}/{collection:[a-z]+}/{document:[a-z,0-9,-]+}", HandlerFc: getDocument(mongoClient), Methods: "GET"},
 		{Path: "/{database:[a-z]+}/{collection:[a-z]+}/{document:[a-z,0-9,-]+}", HandlerFc: putDocument(mongoClient), Methods: "POST,PUT"},
 		{Path: "/{database:[a-z]+}/{collection:[a-z]+}/{document:[a-z,0-9,-]+}", HandlerFc: patchDocument(mongoClient), Methods: "PATCH"},
