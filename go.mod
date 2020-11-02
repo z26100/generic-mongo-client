@@ -7,5 +7,6 @@ require (
 	github.com/golang/protobuf v1.4.3
 	github.com/google/uuid v1.1.2
 	github.com/gorilla/mux v1.8.0
+	github.com/rs/cors v1.7.0 // indirect
 	go.mongodb.org/mongo-driver v1.4.2
 )

@@ -1,4 +1,4 @@
-package rest
+package mongo
 
 import (
 	"log"
